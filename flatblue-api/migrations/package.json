@@ -1,0 +1,14 @@
+{
+  "name": "vanill-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "serve": "node src/server.js",
+    "dev": "npx nodemon src/server.js",
+    "prettier": "npx prettier src --write",
+    "lint": "npx eslint src"
+  },
+  "author": "Noor",
+  "license": "MIT"
+}

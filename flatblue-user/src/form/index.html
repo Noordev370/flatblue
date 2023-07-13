@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>submit post</title>
+    <link rel="stylesheet" href="./form.css" type="text/css" />
+    <script type="module" src="./form.ts"></script>
+  </head>
+  <body>
+    <header>
+      <h1>FOPASU confession revival</h1>
+    </header>
+
+    <main>
+      <form method="post">
+        <fieldset>
+          <legend class="">Gender</legend>
+
+          <input
+            type="radio"
+            name="gender"
+            id="male"
+            value="male"
+            class="float-left"
+          />
+          <label for="male" class="">Male</label>
+
+          <input
+            type="radio"
+            name="gender"
+            id="female"
+            value="female"
+            class="float-right"
+          />
+          <label for="female" class="">Female</label>
+        </fieldset>
+
+        <fieldset class="">
+          <legend>level</legend>
+
+          <select name="level" id="level" class="">
+            <option value="level_1">Level 1</option>
+            <option value="level_2">Level 2</option>
+            <option value="level_3">Level 3</option>
+            <option value="level_4">Level 4</option>
+            <option value="level_5">Level 5</option>
+            <option value="graduated">Graduated</option>
+          </select>
+        </fieldset>
+
+        <fieldset class="">
+          <legend>type your confession</legend>
+          <textarea
+            name="content"
+            id="content"
+            placeholder="hmm......"
+          ></textarea>
+        </fieldset>
+
+        <div>
+          <button type="submit" class="labeled-font">Submit</button>
+        </div>
+      </form>
+    </main>
+
+    <footer><h3>From FOPASU students to FOPASU students</h3></footer>
+  </body>
+</html>

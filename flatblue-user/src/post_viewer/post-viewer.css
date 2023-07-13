@@ -1,0 +1,40 @@
+:root {
+  --primary-color: #154b90;
+  --secondary-color: #66fff7;
+  --text-color: white;
+  --serf-font: "Times New Roman", Times, serif;
+  --san-serf-font: Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: var(--primary-color);
+  text-align: center;
+  color: var(--text-color);
+}
+
+main{
+  max-width: 800px;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+#showmore {
+  background-color: var(--primary-color);
+  margin-top: 2em;
+  padding: 0.5em;
+  font-size: 1.3em;
+  border: 0.3em outset var(--text-color);
+  color: var(--text-color);
+  font-weight: bold;
+}
+
+/*Media queries*/
+
+@media screen and (min-width: 900px) {
+  /* Desktop*/
+}
+
+@media screen and (min-width: 430px) and (max-width: 899px) {
+  /* Tablet*/
+}

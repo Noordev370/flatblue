@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/index.css">
+    <script src="./src//index.ts" type="module"></script>
+    <script type="module"></script>
+    <title>FOPASU confession admin login</title>
+  </head>
+  <body>
+    <header>
+      <h1 class="shadow">Welcome Admin 👋</h1>
+    </header>
+      <form
+        action="http://localhost:8000/admin/login"
+        method="post"
+        enctype="application/x-www-form-urlencoded"
+      >
+        <input type="text" name="role" id="role" placeholder="role" />
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="password"
+        />
+        <button type="submit">Log in</button>
+      </form>
+  </body>
+</html>

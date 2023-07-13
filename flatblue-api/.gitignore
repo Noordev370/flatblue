@@ -1,0 +1,4 @@
+.env
+controlDB.js
+/node_modules
+/build

@@ -1,0 +1,40 @@
+:root {
+  --primary-color: #154b90;
+  --secondary-color: #1b62bd;
+  --complementary-color: #905a15;
+  --text-color: white;
+}
+
+body {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  text-align: center;
+}
+
+form {
+  max-width: 800px;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  border: 0.5rem solid var(--text-color);
+}
+
+input,
+button {
+  min-height: 30px;
+  margin: 1rem 1rem 0.3rem 1rem;
+  font-weight: bold;
+  font-size: larger;
+}
+
+/*Media queries*/
+@media screen and (min-width: 900px) {
+  /* Desktop*/
+}
+
+@media screen and (min-width: 430px) and (max-width: 899px) {
+  /* Tablet*/
+}
