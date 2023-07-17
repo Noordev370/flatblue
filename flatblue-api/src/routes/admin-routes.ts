@@ -1,8 +1,8 @@
-import "dotenv/config";
 import express from "express";
 import jwt from "jsonwebtoken";
 import dbWorkflow from "../db-workflow/admin-workflow.js";
 import { validateAuthToken, validatePassword } from "../utils.js";
+import { JWT_SECRET } from "../config.js";
 
 export const admin_routes = express.Router();
 
@@ -20,7 +20,7 @@ admin_routes.post(
       return;
     }
 
-    const token = jwt.sign({ role: role }, process.env.JWT_SECRET as string, {
+    const token = jwt.sign({ role: role }, JWT_SECRET, {
       expiresIn: "600s",
     });
     res.send(token);

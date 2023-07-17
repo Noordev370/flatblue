@@ -1,6 +1,6 @@
-import "dotenv/config";
 import { Request, Response, NextFunction } from "express";
 import jwt from "jsonwebtoken";
+import { JWT_SECRET } from "./config.js";
 import { pool } from "./database.js";
 
 export async function validatePassword(
@@ -29,7 +29,7 @@ export function validateAuthToken(
       throw new Error("no auth header");
     }
     const token = authorizationHeader.split(" ")[1];
-    jwt.verify(token, process.env.JWT_SECRET as string);
+    jwt.verify(token, JWT_SECRET);
     next();
   } catch (error) {
     res.status(401).send("invalide token");
