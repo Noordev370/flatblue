@@ -1,9 +1,9 @@
 {
-  "name": "saffron-api",
+  "name": "flatblue-api",
   "version": "1.0.0",
-  "description": "saffron-api",
+  "description": "flatblue-api",
   "type": "module",
-  "main": "src/server.ts",
+  "main": "build/server.js",
   "scripts": {
     "build":"tsc",
     "serve": "node build/server.js",

@@ -1,7 +1,7 @@
 {
-  "name": "saffron-admin",
+  "name": "flatblue-admin",
   "version": "1.0.0",
-  "description": "saffron-admin",
+  "description": "flatblue-admin",
   "main": "src/index.ts",
   "scripts": {
     "dev": "vite dev",

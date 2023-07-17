@@ -1,5 +1,5 @@
 import { urlEncoded } from "./utils";
-import { universalURL } from "./config";
+import { apiURL } from "./config ";
 
 const form = document.querySelector("form")!;
 
@@ -8,7 +8,7 @@ form.addEventListener("submit", async (event) => {
   const requestBody = urlEncoded(new FormData(form));
   // handle login
   try {
-    const response = await fetch(`${universalURL}/admin/login`, {
+    const response = await fetch(`${apiURL}/admin/login`, {
       method: "post",
       mode: "cors",
       body: requestBody,
@@ -16,10 +16,13 @@ form.addEventListener("submit", async (event) => {
     if (response.ok) {
       const token = await response.text();
       localStorage.setItem("token", token);
+      window.location.href = "./src/posts_panel/index.html";
+    }
+    else{
+      throw Error();
     }
   } catch (error) {
     console.log("Error during fetch request");
+    alert("error with login process");
   }
-  ///////////////////
-  window.location.href = "./src/posts_panel/index.html";
 });

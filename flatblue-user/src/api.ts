@@ -1,5 +1,5 @@
 import { urlEncoded } from "./utils";
-import { universalURL } from "./config";
+import { apiURL } from "./config";
 
 type PostData = {
   gender: string;
@@ -13,7 +13,7 @@ type CommentsData = { owner_name: string; content: string }[];
 async function getPaginatedPostsIDs(
   offset: number
 ): Promise<number[] | "error"> {
-  const url = `${universalURL}/user/posts/id_list/${offset}`;
+  const url = `${apiURL}/user/posts/id_list/${offset}`;
 
   const response = await fetch(url, {
     method: "get",
@@ -34,7 +34,7 @@ async function getPaginatedPostsIDs(
 }
 
 async function getPostByID(id: number) {
-  const url = `${universalURL}/user/posts/${id}`;
+  const url = `${apiURL}/user/posts/${id}`;
   const response = await fetch(url, {
     method: "get",
     mode: "cors",
@@ -51,7 +51,7 @@ async function getPostByID(id: number) {
 
 async function addComment(postID: number, owner_name: string, comment: string) {
   if (!owner_name) owner_name = "anonymous";
-  const response = await fetch(`${universalURL}/user/comments/add`, {
+  const response = await fetch(`${apiURL}/user/comments/add`, {
     method: "post",
     mode: "cors",
     body: urlEncoded({ post_id: postID, owner_name, comment: comment }),
@@ -64,7 +64,7 @@ async function addComment(postID: number, owner_name: string, comment: string) {
 }
 
 async function getCommentsByPostID(postID: number) {
-  const url = `${universalURL}/user/comments/${postID}`;
+  const url = `${apiURL}/user/comments/${postID}`;
 
   const response = await fetch(url, {
     method: "get",
@@ -80,7 +80,7 @@ async function getCommentsByPostID(postID: number) {
 }
 
 async function getCommentsCountByPostID(postID: number) {
-  const url = `${universalURL}/user/comments/count/${postID}`;
+  const url = `${apiURL}/user/comments/count/${postID}`;
 
   const response = await fetch(url, {
     method: "get",

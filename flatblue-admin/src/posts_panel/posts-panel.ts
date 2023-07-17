@@ -1,6 +1,5 @@
 import { PostElement } from "../components/post-component";
-import { universalURL } from "../config";
-
+import { apiURL } from "../config ";
 // init
 const button = document.querySelector("button")!;
 const mainElement = document.querySelector("main")!;
@@ -15,7 +14,7 @@ type Data = {
 async function makeTransaction(idList: number[]) {
   try {
     const requestBody = JSON.stringify(idList);
-    const response = await fetch(`${universalURL}/admin/posts/transaction`, {
+    const response = await fetch(`${apiURL}/admin/posts/transaction`, {
       method: "post",
       mode: "cors",
       headers: {
@@ -44,7 +43,7 @@ function getAcceptedPostsIDS() {
 
 async function showPosts() {
   try {
-    const response = await fetch(`${universalURL}/admin/posts`, {
+    const response = await fetch(`${apiURL}/admin/posts`, {
       method: "get",
       mode: "cors",
       headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },

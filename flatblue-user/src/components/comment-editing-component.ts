@@ -40,6 +40,8 @@ const componentStyles = css`
     padding: 0.3em;
     resize: none;
     border: none;
+    overflow-y: scroll;
+    min-height: 6em;
     font-size: 1rem;
     font-family: var(--san-serf-font);
   }
@@ -51,11 +53,11 @@ export class CommentEditor extends LitElement {
   post_id = 0;
 
   async firstUpdated() {
-    const textareaElement = this.renderRoot.querySelector("textarea")!;
+    /*const textareaElement = this.renderRoot.querySelector("textarea")!;
     textareaElement.addEventListener("input", () => {
       const scrollHeight = textareaElement.scrollHeight;
       textareaElement.style.height = Math.max(scrollHeight, 80) + "px";
-    });
+    });*/
   }
   async submitHandler(event: Event) {
     event.preventDefault();

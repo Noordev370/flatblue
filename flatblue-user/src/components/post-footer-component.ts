@@ -12,12 +12,13 @@ const componentStyles = css`
   button {
     width: 40%;
     max-width: 300px;
-    max-height: 40px;
+    max-height: 50px;
     border: 0.3rem solid white;
     border-radius: 10px;
     margin-bottom: 0.3rem;
     padding: 0.5rem;
     background-color: var(--mischka);
+    font-size: 1em;
   }
 `;
 

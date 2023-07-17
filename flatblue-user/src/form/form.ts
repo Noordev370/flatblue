@@ -1,4 +1,4 @@
-import { universalURL } from "../config";
+import { apiURL } from "../config";
 import { urlEncoded } from "../utils";
 
 function resizeTextArea() {
@@ -23,7 +23,7 @@ async function handleFormDataSending(event: Event) {
   const requestBody = urlEncoded(new FormData(form));
 
   try {
-    const response = await fetch(`${universalURL}/user/posts/add/`, {
+    const response = await fetch(`${apiURL}/user/posts/add/`, {
       method: "post",
       mode: "cors",
       body: requestBody,
