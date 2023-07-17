@@ -46,7 +46,7 @@ async function showPosts() {
     const response = await fetch(`${apiURL}/admin/posts`, {
       method: "get",
       mode: "cors",
-      headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
+      headers: { Authorization: `Bearer ${sessionStorage.getItem("token")}` },
     });
     const result: Data[] | [] = await response.json();
     if (result.length === 0) {
