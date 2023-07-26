@@ -3,14 +3,14 @@ import { customElement } from "lit/decorators.js";
 import { getCommentsByPostID } from "../api";
 
 const componentStyles = css`
-.container{
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  text-align: left;
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: left;
   }
-  span{
-    font-size:larger;
+  span {
+    font-size: larger;
   }
 `;
 
@@ -34,13 +34,15 @@ export class CommenstViewer extends LitElement {
   }
   protected render() {
     if (this.data == "loading") return html`<div>loading</div>`;
-    return html`
-    <span>Comments: </span>
-    <div class = "container">
-    ${this.data.map((obj) => {
-      return html`<comment-element .userName=${obj.owner_name} .comment=${obj.content}></comment-element>`;
-  })}
-    </div>`;
+    return html` <span>Comments: </span>
+      <div class="container">
+        ${this.data.map((obj) => {
+          return html`<comment-element
+            .userName=${obj.owner_name}
+            .comment=${obj.content}
+          ></comment-element>`;
+        })}
+      </div>`;
   }
 }
 

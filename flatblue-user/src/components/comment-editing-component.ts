@@ -1,10 +1,12 @@
-import { LitElement, html, css, PropertyValueMap } from "lit";
+import { LitElement, html, css } from "lit";
 import { customElement, property } from "lit/decorators.js";
 import { addComment } from "../api";
 
 const componentStyles = css`
   :host {
     display: block;
+    background-color: var(--ship-cove);
+    border: 0.2rem solid white;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -12,35 +14,32 @@ const componentStyles = css`
     transform: translate(-50%, -50%);
   }
 
-  .container{
-    background-color: #e9e9ed;
-  }
-
   form {
     display: flex;
     flex-direction: column;
   }
 
-  #close {
-    background-color: red;
-    position: relative;
-    min-width:30px;
-    
+  input[type="text"] {
+    background-color: var(--ship-cove);
   }
 
-  #submit {
-    min-height: 30px;
+  button {
+    min-height: 40px;
+    min-width: 80px;
+    border: 0.3rem solid white;
+    margin: 1px 10px 1px 10px;
+    background-color: var(--mischka);
   }
 
-  #owner_name{
+  #owner_name {
     min-height: 30px;
   }
   textarea {
-    background-color: white;
+    background-color: var(--ship-cove);
     box-sizing: border-box;
     padding: 0.3em;
     resize: none;
-    border: 0.2em solid black;
+    border: none;
     font-size: 1rem;
     font-family: var(--san-serf-font);
   }
@@ -54,9 +53,9 @@ export class CommentEditor extends LitElement {
   async firstUpdated() {
     const textareaElement = this.renderRoot.querySelector("textarea")!;
     textareaElement.addEventListener("input", () => {
-    const scrollHeight = textareaElement.scrollHeight;
-    textareaElement.style.height = Math.max(scrollHeight, 80) + "px";
-  });
+      const scrollHeight = textareaElement.scrollHeight;
+      textareaElement.style.height = Math.max(scrollHeight, 80) + "px";
+    });
   }
   async submitHandler(event: Event) {
     event.preventDefault();
@@ -84,12 +83,23 @@ export class CommentEditor extends LitElement {
     );
   }
   render() {
-    return html`<div class = "container">
-      <button id="close" @click=${this.closeHandler}>X</button>
+    return html`<div class="container">
       <form @submit=${this.submitHandler}>
-        <input id="owner_name" type="text" name="owner_name" value="Anonymous" />
-        <textarea name="content" id=""></textarea>
-        <button type="submit" id="submit">submit</button>
+        <input
+          id="owner_name"
+          type="text"
+          name="owner_name"
+          value="Anonymous"
+        />
+        <textarea
+          name="content"
+          placeholder="comment ..."
+          dir="auto"
+        ></textarea>
+        <div>
+          <button type="submit" id="submit">submit</button>
+          <button id="close" @click=${this.closeHandler}>cancel</button>
+        </div>
       </form>
     </div>`;
   }

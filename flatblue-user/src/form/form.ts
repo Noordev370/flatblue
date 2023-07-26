@@ -10,11 +10,11 @@ function resizeTextArea() {
 }
 
 function showSuccess() {
-  alert("post sent successfully 😊");
+  document.body.innerHTML = `<h2>post sent successfully 😊</h2>`;
 }
 
 function showFailure() {
-  alert("post wasn't sent 😢");
+  document.body.innerHTML = `<h2>post wasn't sent 😢</h2>`;
 }
 
 async function handleFormDataSending(event: Event) {

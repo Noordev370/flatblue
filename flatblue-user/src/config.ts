@@ -1,1 +1,1 @@
-export const universalURL = "http://192.168.1.105:8000";
+export const universalURL = import.meta.env.VITE_API_URL as string;

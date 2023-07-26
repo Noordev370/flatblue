@@ -1,5 +1,6 @@
 import express from "express";
 import dbWorkflow from "../db-workflow/user-workflow.js";
+import { isEmpty } from "../utils.js";
 
 export const user_routes = express.Router();
 
@@ -8,6 +9,7 @@ user_routes.post(
   express.urlencoded({ extended: true }),
   async (req, res) => {
     const { gender, level, content } = req.body;
+    if (isEmpty(gender, level, content)) res.status(400).send("error");
     try {
       dbWorkflow.addPost(gender, level, content);
       res.send("ok");
@@ -40,6 +42,7 @@ user_routes.post(
   express.urlencoded({ extended: true }),
   async (req, res) => {
     const { post_id, owner_name, comment } = req.body;
+    if (isEmpty(post_id, owner_name, comment)) res.status(400).send("error");
     try {
       await dbWorkflow.addComment(post_id, owner_name, comment);
       res.send("ok");

@@ -16,16 +16,17 @@
     <main>
       <form method="post">
         <fieldset>
-          <legend class="">Gender</legend>
+          <legend>Gender</legend>
 
           <input
+            required
             type="radio"
             name="gender"
             id="male"
             value="male"
             class="float-left"
           />
-          <label for="male" class="">Male</label>
+          <label for="male">Male</label>
 
           <input
             type="radio"
@@ -34,13 +35,13 @@
             value="female"
             class="float-right"
           />
-          <label for="female" class="">Female</label>
+          <label for="female">Female</label>
         </fieldset>
 
-        <fieldset class="">
+        <fieldset>
           <legend>level</legend>
 
-          <select name="level" id="level" class="">
+          <select name="level" id="level" required>
             <option value="level_1">Level 1</option>
             <option value="level_2">Level 2</option>
             <option value="level_3">Level 3</option>
@@ -50,17 +51,19 @@
           </select>
         </fieldset>
 
-        <fieldset class="">
+        <fieldset>
           <legend>type your confession</legend>
           <textarea
+            required
             name="content"
+            dir="auto"
             id="content"
             placeholder="hmm......"
           ></textarea>
         </fieldset>
 
         <div>
-          <button type="submit" class="labeled-font">Submit</button>
+          <button type="submit">Submit</button>
         </div>
       </form>
     </main>

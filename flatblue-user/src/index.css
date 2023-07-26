@@ -1,18 +1,13 @@
-:root {
-  --primary-color: #154b90;
-  --secondary-color: #1b62bd;
-  --complementary-color: #905a15;
-  --text-color: white;
-}
+@import url("./shared-styles/variables.css");
 
 body {
   text-align: center;
-  background-color: var(--primary-color);
+  background-color: var(--fopasue-color);
   height: 100vh;
-  color: var(--text-color);
+  color: white;
 }
 
-div {
+main {
   position: absolute;
   left: 50%;
   top: 50%;

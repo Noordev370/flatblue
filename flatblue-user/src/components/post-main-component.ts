@@ -4,20 +4,16 @@ import { getPostByID } from "../api";
 import { showLoading } from "../utils";
 
 const componentStyles = css`
-  :host{
-    background-color: inherit;
-    font-family: inherit;
-  }
   .viewer-container {
-    background-color: inherit;
     display: flex;
     flex-direction: column;
   }
 
-  div[class="viewer-header"] > div {
+  .viewer-header > div {
     padding: 0.1em;
     border-bottom: 3px solid white;
     font-weight: bold;
+    color: var(--mischka);
   }
 
   #identity {
@@ -66,7 +62,9 @@ export class PostMain extends LitElement {
         </div>
         <div id="time">${showLoading(this.data?.date)}</div>
       </div>
-      <div class="viewer-body">${showLoading(this.data?.content)}</div>
+      <div class="viewer-body" dir="auto">
+        ${showLoading(this.data?.content)}
+      </div>
     </div>`;
   }
 

@@ -3,10 +3,6 @@ import { customElement, property } from "lit/decorators.js";
 import { getCommentsCountByPostID } from "../api";
 
 const componentStyles = css`
-  :host{
-    background-color: inherit;
-    font-family: inherit;
-  }
   .footer-container {
     display: flex;
     justify-content: space-around;
@@ -14,14 +10,14 @@ const componentStyles = css`
     margin-top: 1rem;
   }
   button {
-    color: inherit;
     width: 40%;
     max-width: 300px;
     max-height: 40px;
     border: 0.3rem solid white;
     border-radius: 10px;
-    margin-bottom:0.3rem;
+    margin-bottom: 0.3rem;
     padding: 0.5rem;
+    background-color: var(--mischka);
   }
 `;
 

@@ -35,3 +35,10 @@ export function validateAuthToken(
     res.status(401).send("invalide token");
   }
 }
+
+export function isEmpty(...args: any[]) {
+  args.forEach((element) => {
+    if (!element) return true;
+  });
+  return false;
+}

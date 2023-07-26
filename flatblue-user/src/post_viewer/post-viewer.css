@@ -1,18 +1,12 @@
-:root {
-  --primary-color: #154b90;
-  --secondary-color: #66fff7;
-  --text-color: white;
-  --serf-font: "Times New Roman", Times, serif;
-  --san-serf-font: Helvetica, Arial, sans-serif;
-}
+@import url("../shared-styles/variables.css");
 
 body {
-  background-color: var(--primary-color);
+  background-color: var(--fopasue-color);
   text-align: center;
-  color: var(--text-color);
+  color: white;
 }
 
-main{
+main {
   max-width: 800px;
   position: relative;
   left: 50%;
@@ -24,8 +18,8 @@ main{
   margin-top: 2em;
   padding: 0.5em;
   font-size: 1.3em;
-  border: 0.3em outset var(--text-color);
-  color: var(--text-color);
+  border: 0.3em outset white;
+  color: white;
   font-weight: bold;
 }
 

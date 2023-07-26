@@ -24,7 +24,7 @@ async function makeTransaction(idList: number[]) {
       },
       body: requestBody,
     });
-    if(response.ok){
+    if (response.ok) {
       mainElement.innerHTML = "<h1>Done</h1>";
       document.body.removeChild(button);
     }
@@ -33,13 +33,13 @@ async function makeTransaction(idList: number[]) {
   }
 }
 function getAcceptedPostsIDS() {
-  const acceptElements:NodeListOf<PostElement> = document.querySelectorAll(".accepted");
-  const idList:number[] = [];
-  acceptElements.forEach(element => {
+  const acceptElements: NodeListOf<PostElement> =
+    document.querySelectorAll(".accepted");
+  const idList: number[] = [];
+  acceptElements.forEach((element) => {
     idList.push(element.postID);
   });
   return idList;
-
 }
 
 async function showPosts() {
@@ -61,7 +61,7 @@ async function showPosts() {
       });
     }
   } catch (error) {
-   console.log("Error with showposts function");
+    console.log("Error with showposts function");
   }
 }
 

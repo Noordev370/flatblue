@@ -1,15 +1,9 @@
-:root {
-  --primary-color: #154b90;
-  --secondary-color: #66fff7;
-  --text-color: white;
-  --serf-font: "Times New Roman", Times, serif;
-  --san-serf-font: Helvetica, Arial, sans-serif;
-}
+@import url("../shared-styles/variables.css");
 
 body {
-  background-color: var(--primary-color);
+  background-color: var(--fopasue-color);
   text-align: center;
-  color: var(--text-color);
+  color: white;
 }
 header {
   font-family: var(--serf-font);
@@ -46,17 +40,18 @@ select {
 }
 
 button {
-  color: var(--text-color);
+  color: white;
   background-color: var(--primary-color);
   padding: 1em;
   font-size: 1.2em;
-  border: 0.3em outset var(--text-color);
+  font-weight: bold;
+  border: 0.3em outset white;
   margin-bottom: 2em;
 }
 
 fieldset {
   margin-bottom: 2em;
-  border: 0.2em solid var(--text-color);
+  border: 0.2em solid white;
 }
 
 legend {

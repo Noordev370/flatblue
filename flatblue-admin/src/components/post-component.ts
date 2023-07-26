@@ -32,7 +32,7 @@ const componentStyles = css`
     font-size: larger;
   }
 
-  button{
+  button {
     margin: 1rem;
     margin-bottom: 0.1rem;
     padding: 0.3rem;
@@ -55,13 +55,12 @@ export class PostElement extends LitElement {
   postID = 0;
   data: Data | undefined = undefined;
   @state()
-  accepted : boolean = false;
+  accepted: boolean = false;
 
-  clickHandler(){
-    if(this.accepted){
+  clickHandler() {
+    if (this.accepted) {
       this.classList.remove("accepted");
-    }
-    else{
+    } else {
       this.classList.add("accepted");
     }
     this.accepted = !this.accepted;
@@ -80,7 +79,9 @@ export class PostElement extends LitElement {
       </div>
       </div>
       <div class="footer">
-        <button @click=${this.clickHandler}>${this.accepted ? html`reject` : html`accept`}</button>
+        <button @click=${this.clickHandler}>${
+      this.accepted ? html`reject` : html`accept`
+    }</button>
       </div>
     </div>`;
   }
