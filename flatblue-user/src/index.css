@@ -3,7 +3,7 @@
 body {
   text-align: center;
   background-color: var(--fopasue-color);
-  height: 100vh;
+  height: 100%;
   color: white;
 }
 
@@ -16,7 +16,12 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  list-style-type: "";
+}
+
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 li {
@@ -34,7 +39,6 @@ li > a {
   font-size: 2em;
   font-weight: bold;
   color: white;
-  font-family: Helvetica, sans-serif;
 }
 /*Media queries*/
 @media screen and (min-width: 900px) {

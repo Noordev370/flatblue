@@ -6,7 +6,7 @@ const componentStyles = css`
   :host {
     display: block;
     background-color: var(--ship-cove);
-    border: 0.2rem solid white;
+    border: 0.3rem solid white;
     position: fixed;
     top: 50%;
     left: 50%;

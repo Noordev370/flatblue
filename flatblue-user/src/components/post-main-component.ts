@@ -25,7 +25,7 @@ const componentStyles = css`
   }
 
   .viewer-body {
-    padding: 1em 0.5em 0.2em 0.5em;
+    padding: 1em 0.5em 0.3em 0.5em;
   }
 `;
 
