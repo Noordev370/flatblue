@@ -52,13 +52,6 @@ export class CommentEditor extends LitElement {
   @property({ type: Number })
   post_id = 0;
 
-  async firstUpdated() {
-    /*const textareaElement = this.renderRoot.querySelector("textarea")!;
-    textareaElement.addEventListener("input", () => {
-      const scrollHeight = textareaElement.scrollHeight;
-      textareaElement.style.height = Math.max(scrollHeight, 80) + "px";
-    });*/
-  }
   async submitHandler(event: Event) {
     event.preventDefault();
     const form = event.target!;

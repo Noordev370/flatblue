@@ -15,7 +15,7 @@ form.addEventListener("submit", async (event) => {
     });
     if (response.ok) {
       const token = await response.text();
-      localStorage.setItem("token", token);
+      sessionStorage.setItem("token", token);
       window.location.href = "./src/posts_panel/index.html";
     }
     else{

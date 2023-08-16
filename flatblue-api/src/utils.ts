@@ -36,6 +36,7 @@ export function validateAuthToken(
   }
 }
 
+// return true if one of the arguments in truthy value
 export function isEmpty(...args: any[]) {
   args.forEach((element) => {
     if (!element) return true;

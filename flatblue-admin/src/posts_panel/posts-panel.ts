@@ -18,7 +18,7 @@ async function makeTransaction(idList: number[]) {
       method: "post",
       mode: "cors",
       headers: {
-        Authorization: `Bearer ${localStorage.getItem("token")}`,
+        Authorization: `Bearer ${sessionStorage.getItem("token")}`,
         "Content-Type": "application/json",
       },
       body: requestBody,
