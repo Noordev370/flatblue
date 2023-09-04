@@ -1,4 +1,4 @@
-import { urlEncoded } from "./utils";
+import { urlEncoded } from "./utilities";
 import { apiURL } from "./config";
 
 type PostData = {

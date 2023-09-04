@@ -1,5 +1,5 @@
-import { apiURL } from "../config";
-import { urlEncoded } from "../utils";
+import { apiURL } from "../utils/config";
+import { urlEncoded } from "../utils/utilities";
 
 function resizeTextArea() {
   const textareaElement = document.querySelector("textarea")!;

@@ -1,6 +1,6 @@
 import { LitElement, html, css } from "lit";
 import { customElement, property } from "lit/decorators.js";
-import { addComment } from "../api";
+import { addComment } from "../utils/api";
 
 const componentStyles = css`
   :host {

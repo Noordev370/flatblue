@@ -1,4 +1,4 @@
-import { getPaginatedPostsIDs } from "../api";
+import { getPaginatedPostsIDs } from "../utils/api";
 
 // initialize
 let currentOffset = 0;

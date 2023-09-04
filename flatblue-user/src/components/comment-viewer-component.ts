@@ -1,6 +1,6 @@
 import { LitElement, html, css } from "lit";
 import { customElement } from "lit/decorators.js";
-import { getCommentsByPostID } from "../api";
+import { getCommentsByPostID } from "../utils/api";
 
 const componentStyles = css`
   .container {

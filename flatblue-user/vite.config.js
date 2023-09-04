@@ -7,8 +7,8 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
-        form: resolve(__dirname, 'src/form/index.html'),
-        viewer:resolve(__dirname, 'src/post_viewer/index.html')
+        form: resolve(__dirname, 'src/pages/form.html'),
+        viewer:resolve(__dirname, 'src/pages/post-viewer.html')
       },
     },
   },

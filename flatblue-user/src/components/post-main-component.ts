@@ -1,7 +1,7 @@
 import { LitElement, html, css } from "lit";
 import { customElement, property } from "lit/decorators.js";
-import { getPostByID } from "../api";
-import { showLoading } from "../utils";
+import { getPostByID } from "../utils/api";
+import { showLoading } from "../utils/utilities";
 
 const componentStyles = css`
   .viewer-container {
