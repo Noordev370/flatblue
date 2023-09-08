@@ -1,0 +1,22 @@
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  max-width: 800px;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+button#showmore{
+  margin-top: 1em;
+}
+/*Media queries*/
+
+@media screen and (min-width: 900px) {
+  /* Desktop*/
+}
+
+@media screen and (min-width: 430px) and (max-width: 899px) {
+  /* Tablet*/
+}

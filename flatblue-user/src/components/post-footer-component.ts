@@ -5,18 +5,20 @@ import { getCommentsCountByPostID } from "../utils/api";
 const componentStyles = css`
   .footer-container {
     display: flex;
-    justify-content: space-around;
-    margin-top: 1rem;
+    justify-content: space-between;
+    margin-top: 0.5em;
   }
   button {
+    background-color: var(--mischka);
     width: 40%;
     max-width: 300px;
-    border: 0.3rem solid white;
+    border: 0.2em solid var(--border-color);
     border-radius: 10px;
-    margin-bottom: 0.3rem;
-    padding: 0.5rem;
-    background-color: var(--mischka);
-    font-size: 1em;
+    margin-right: 0.3em;
+    margin-left: 0.3em;
+    margin-bottom: 0.3em;
+    padding: 0.3em;
+    font-size: 0.9em;
   }
 `;
 

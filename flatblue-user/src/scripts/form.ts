@@ -1,13 +1,6 @@
 import { apiURL } from "../utils/config";
 import { urlEncoded } from "../utils/utilities";
 
-function resizeTextArea() {
-  const textareaElement = document.querySelector("textarea")!;
-  textareaElement.addEventListener("input", () => {
-    const scrollHeight = textareaElement.scrollHeight;
-    textareaElement.style.height = Math.max(scrollHeight, 80) + "px";
-  });
-}
 
 function showSuccess() {
   document.body.innerHTML = `<h2>post sent successfully 😊</h2>`;
@@ -40,8 +33,6 @@ async function handleFormDataSending(event: Event) {
 }
 
 function main() {
-  resizeTextArea();
-
   const form = document.querySelector("form")!;
   form.addEventListener("submit", handleFormDataSending);
 }

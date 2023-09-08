@@ -10,10 +10,10 @@ const componentStyles = css`
   }
 
   .viewer-header > div {
-    padding: 0.1em;
-    border-bottom: 3px solid white;
-    font-weight: bold;
     color: var(--mischka);
+    padding: 0.2em;
+    border-bottom: 0.2em solid var(--border-color);
+    font-weight: bold;
   }
 
   #identity {

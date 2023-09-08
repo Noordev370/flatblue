@@ -6,11 +6,11 @@ const componentStyles = css`
   .container {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 0.5em;
     text-align: left;
   }
   span {
-    font-size: larger;
+    font-size: 1.3em;
   }
 `;
 

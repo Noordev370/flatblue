@@ -3,16 +3,17 @@ import { customElement } from "lit/decorators.js";
 
 const componentStyels = css`
   :host {
-    border: 0.3rem solid white;
-    border-radius: 15px;
-    padding-left: 1rem;
-    padding-top: 0.5rem;
     background-color: var(--ship-cove);
     color: black;
+    border: 0.2em solid var(--border-color);
+    border-radius: 15px;
+    padding-left: 0.5em;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
   }
   .header {
     font-weight: bold;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.5em;
   }
   .header::first-letter {
     text-transform: uppercase;

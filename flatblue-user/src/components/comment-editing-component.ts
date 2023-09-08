@@ -6,7 +6,7 @@ const componentStyles = css`
   :host {
     display: block;
     background-color: var(--ship-cove);
-    border: 0.3rem solid white;
+    border: 0.3em solid var(--border-color);
     position: fixed;
     top: 50%;
     left: 50%;
@@ -24,11 +24,12 @@ const componentStyles = css`
   }
 
   button {
+    background-color: var(--mischka);
     min-height: 40px;
     min-width: 80px;
-    border: 0.3rem solid white;
-    margin: 1px 10px 1px 10px;
-    background-color: var(--mischka);
+    border: 0.3em solid white;
+    margin-right: 1em;
+    margin-left: 1em;
   }
 
   #owner_name {
@@ -42,7 +43,7 @@ const componentStyles = css`
     border: none;
     overflow-y: scroll;
     min-height: 6em;
-    font-size: 1rem;
+    font-size: 1em;
     font-family: var(--san-serf-font);
   }
 `;

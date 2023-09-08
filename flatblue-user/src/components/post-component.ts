@@ -7,14 +7,10 @@ import "./comment-editing-component.ts";
 import "./comment-component.ts";
 const componentStyles = css`
   :host {
-    border: 0.3rem solid white;
-    color: white;
     display: block;
+    border: 0.2em solid white;
     position: relative;
-    margin-top: 1em;
-    margin-bottom: 2em;
-    padding: 0.3rem;
-    font-family: var(--san-serf-font);
+    font-family: var(--sans-font);
   }
 `;
 
