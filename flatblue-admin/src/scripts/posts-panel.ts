@@ -1,5 +1,6 @@
 import { PostElement } from "../components/post-component";
-import { apiURL } from "../config ";
+import { apiURL } from "../utils/config ";
+
 // init
 const button = document.querySelector("button")!;
 const mainElement = document.querySelector("main")!;

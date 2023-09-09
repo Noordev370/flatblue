@@ -1,5 +1,5 @@
-import { urlEncoded } from "./utils";
-import { apiURL } from "./config ";
+import { urlEncoded } from "../utils/utilities";
+import { apiURL } from "../utils/config ";
 
 const form = document.querySelector("form")!;
 
@@ -16,7 +16,7 @@ form.addEventListener("submit", async (event) => {
     if (response.ok) {
       const token = await response.text();
       sessionStorage.setItem("token", token);
-      window.location.href = "./src/posts_panel/index.html";
+      window.location.href = "./src/pages/posts-panel.html";
     }
     else{
       throw Error();

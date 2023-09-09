@@ -1,0 +1,22 @@
+main {
+  max-width: 800px;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+button {
+}
+
+.accepted {
+  border-color: var(--complementary-color) !important;
+}
+
+/*Media queries*/
+@media screen and (min-width: 900px) {
+  /* Desktop*/
+}
+
+@media screen and (min-width: 430px) and (max-width: 899px) {
+  /* Tablet*/
+}
