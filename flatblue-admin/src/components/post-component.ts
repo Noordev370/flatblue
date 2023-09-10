@@ -3,19 +3,22 @@ import { customElement, state } from "lit/decorators.js";
 
 const componentStyles = css`
   :host {
-    border: 0.3rem solid var(--text-color, white);
-    color: var(--text-color);
+    border: 0.2em solid var(--text-color, white);
+    color: currentColor;
     display: block;
     position: relative;
-    margin-top: 1em;
-    margin-bottom: 2em;
-    padding: 0.3rem;
-    font-family: var(--san-serf-font);
+    padding: 0.3em;
+    font-family: var(--sans-font);
   }
 
-  div[class="viewer-header"] > div {
+  .viewer{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+  }
+  .viewer-header > div {
     padding: 0.1em;
-    border-bottom: 3px solid white;
+    border-bottom: 0.2em solid var(--border-color);
     font-weight: bold;
   }
 
@@ -28,15 +31,15 @@ const componentStyles = css`
   }
 
   .viewer-body {
-    padding: 1em 0.5em 0.2em 0.5em;
-    font-size: larger;
+    padding: 0.5em 0.1em 0.1em 0.1em;
+    font-size: 1.2em;
   }
 
-  button {
-    margin: 1rem;
-    margin-bottom: 0.1rem;
-    padding: 0.3rem;
-    font-size: 1rem;
+  .footer > button {
+    margin: 1em;
+    margin-bottom: 0.2em;
+    padding: 0.3em;
+    font-size: 1em;
     min-width: 80px;
   }
 `;
@@ -59,9 +62,9 @@ export class PostElement extends LitElement {
 
   clickHandler() {
     if (this.accepted) {
-      this.classList.remove("accepted");
+      this.setAttribute("data-state", "rejected");
     } else {
-      this.classList.add("accepted");
+      this.setAttribute("data-state", "accepted");
     }
     this.accepted = !this.accepted;
   }

@@ -34,7 +34,7 @@ async function makeTransaction(idList: number[]) {
 }
 function getAcceptedPostsIDS() {
   const acceptElements: NodeListOf<PostElement> =
-    document.querySelectorAll(".accepted");
+    document.querySelectorAll('[data-state="accepted"]');
   const idList: number[] = [];
   acceptElements.forEach((element) => {
     idList.push(element.postID);

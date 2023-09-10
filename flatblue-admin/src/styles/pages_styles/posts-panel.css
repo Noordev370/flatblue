@@ -1,4 +1,7 @@
 main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
   max-width: 800px;
   position: relative;
   left: 50%;
@@ -6,10 +9,11 @@ main {
 }
 
 button {
+  margin-top: 1em;
 }
 
-.accepted {
-  border-color: var(--complementary-color) !important;
+post-element[data-state="accepted"] {
+  border-color: gold !important;
 }
 
 /*Media queries*/
