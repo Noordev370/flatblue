@@ -15,8 +15,5 @@ The platform is divided into 3 separated apps
 - VS Code as default editor *surely you can use your favorite one*
 - TypeScript for both front-end and back-end
 - Vite for front-end tooling
-- Lit for web components creating
-- express js for back-end
-
-## contributions
-**not yet ready**
+- Lit for web components
+- express.js for back-end
