@@ -1,27 +1,25 @@
 :root {
-    /*colors*/
-    --fopasue-color: #154b90;
-    --mischka: #ced1da;
-    --ship-cove: #a6b3d9;
-  
-    /* typography */
-    --text-color: white;
-    --serf-font:  "Times New Roman", Times, serif;
-    --sans-font: Helvetica, Arial, sans-serif;
-  
-    /* whitespaces*/
-    --padding: 1em;
-    --margin: 1em;
-  
-    /* borders */
-    --border-color: white;
-  }
+  /*colors*/
+  --fopasue-color: #154b90;
+  --mischka: #ced1da;
+  --ship-cove: #a6b3d9;
 
-  
-  @media screen and (min-width: 400px) and (max-width: 899px){
-    /* tablet */
-  }
-  @media screen and (min-width: 900px){
-    /* desktop */
-  }
-  
+  /* typography */
+  --text-color: white;
+  --serf-font: "Times New Roman", Times, serif;
+  --sans-font: Helvetica, Arial, sans-serif;
+
+  /* whitespaces*/
+  --padding: 1em;
+  --margin: 1em;
+
+  /* borders */
+  --border-color: white;
+}
+
+@media screen and (min-width: 400px) and (max-width: 899px) {
+  /* tablet */
+}
+@media screen and (min-width: 900px) {
+  /* desktop */
+}

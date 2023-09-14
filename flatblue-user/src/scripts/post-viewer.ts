@@ -42,7 +42,8 @@ async function showNextPosts() {
   }
   if (idList === "noMoreContent") {
     showmoreButton.style.display = "none";
-    if (currentOffset === 0) { // only show this message when there is no posts in the DB
+    if (currentOffset === 0) {
+      // only show this message when there is no posts in the DB
       const mainElement = document.querySelector("main")!;
       mainElement.innerHTML = "<h2>no posts to show</h2>";
     }

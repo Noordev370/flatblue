@@ -55,14 +55,14 @@ label {
 
 @media screen and (min-width: 900px) {
   /* Desktop*/
-  fieldset{
+  fieldset {
     margin-bottom: 3em;
   }
 }
 
 @media screen and (min-width: 450px) and (max-width: 899px) {
   /* Tablet*/
-  fieldset{
+  fieldset {
     margin-bottom: 2.5em;
   }
 }

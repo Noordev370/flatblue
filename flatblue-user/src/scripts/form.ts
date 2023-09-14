@@ -1,7 +1,6 @@
 import { apiURL } from "../utils/config";
 import { urlEncoded } from "../utils/utilities";
 
-
 function showSuccess() {
   document.body.innerHTML = `<h2>post sent successfully 😊</h2>`;
 }

@@ -8,7 +8,7 @@ main {
   transform: translate(-50%);
 }
 
-button#showmore{
+button#showmore {
   margin-top: 1em;
 }
 /*Media queries*/
