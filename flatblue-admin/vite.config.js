@@ -7,7 +7,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, "index.html"),
-        viewer: resolve(__dirname, "src/posts_panel/index.html"),
+        viewer: resolve(__dirname, "src/pages/posts-panel.html"),
       },
     },
   },

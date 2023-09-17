@@ -17,8 +17,7 @@ form.addEventListener("submit", async (event) => {
       const token = await response.text();
       sessionStorage.setItem("token", token);
       window.location.href = "./src/pages/posts-panel.html";
-    }
-    else{
+    } else {
       throw Error();
     }
   } catch (error) {

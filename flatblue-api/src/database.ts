@@ -1,6 +1,10 @@
-import {POSTGRES_DB, POSTGRES_HOST, POSTGRES_USER, POSTGRES_PASSWORD} from './config.js';
+import {
+  POSTGRES_DB,
+  POSTGRES_HOST,
+  POSTGRES_USER,
+  POSTGRES_PASSWORD,
+} from "./config.js";
 import pg from "pg";
-
 
 const pool = new pg.Pool({
   host: POSTGRES_HOST,

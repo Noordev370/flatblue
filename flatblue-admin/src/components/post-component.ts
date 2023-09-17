@@ -11,7 +11,7 @@ const componentStyles = css`
     font-family: var(--sans-font);
   }
 
-  .viewer{
+  .viewer {
     display: flex;
     flex-direction: column;
     gap: 0.5em;

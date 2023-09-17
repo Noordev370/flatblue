@@ -5,12 +5,17 @@ main {
   transform: translate(-50%, -50%);
 }
 
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
 li {
   border: 0.2em solid var(--border-color);
   width: 70vw;
   max-width: 800px;
-  padding: 0.5em;
-  margin: 1em;
+  padding-block: 0.5em;
 }
 
 li > a {
