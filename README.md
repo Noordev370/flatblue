@@ -1,6 +1,6 @@
 # flatblue
 
-### FOPASU university web platform for anonymous confessions sharing
+### Web app for anonymous confessions sharing
 
 ## UI design
 Monochromatic blue with flat design style  
